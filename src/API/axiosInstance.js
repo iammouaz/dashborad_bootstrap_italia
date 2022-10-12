@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { loginData } from "Recoil/Atoms";
+import { loginAttemp, loginData } from "Recoil/Atoms";
 
 var MockAdapter = require("axios-mock-adapter");
 
@@ -10,6 +10,7 @@ const axiosClient = axios.create();
 
 export const useAxiosInstance = () => {
   const [lognInfo] = useRecoilState(loginData);
+  const [loginA] = useRecoilState(loginAttemp);
 
   const navigate = useNavigate();
 
@@ -37,21 +38,31 @@ export const useAxiosInstance = () => {
     return config;
   });
 
-  function setAuthToken(tokenP) {
-    axiosClient.interceptors.request.use((config) => {
-      config.headers.Authorization = tokenP ? `Bearer ${tokenP}` : "";
-      return config;
-    });
-  }
-
   var mock = new MockAdapter(axiosClient);
 
-  mock.onGet("/login").reply(200, {
-    lognInfo,
+  mock.onGet("/login").reply(function () {
+    return new Promise(function (resolve, reject) {
+      const isMatched = lognInfo.filter(
+        (item) =>
+          item.email === loginA.email && item.password === loginA.password
+      );
+      setTimeout(function () {
+        if (isMatched.length !== 0) {
+          resolve([200, isMatched]);
+        } else {
+          resolve([500, { success: false }]);
+        }
+      }, 1000);
+    });
   });
 
-  mock.onGet("/register").reply(200, {
-    lognInfo,
+  mock.onGet("/register").reply(function () {
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        resolve([200, { success: true }]);
+      }, 1000);
+    });
   });
-  return { setAuthToken, axiosClient };
+
+  return { axiosClient };
 };

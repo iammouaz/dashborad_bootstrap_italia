@@ -4,12 +4,15 @@ import { ErrorMessage, Form, Formik } from "formik";
 import { registerSchema } from "Configs/formsSchemas";
 import { v4 as uuidv4 } from "uuid";
 import { useRegister } from "Hooks/Queries/User/useRegister";
+import { Link } from "react-router-dom";
 
 interface RegisterFormProps {}
 
 const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
   const [loginD, setLogin] = useRecoilState(loginData);
   const { mutate, isLoading } = useRegister();
+
+
   return (
     <Formik
       initialValues={{
@@ -121,7 +124,7 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
 
             <div className="text-center">
               <p>
-                Already a member <a href="login">Login</a>
+                Already a member <Link to="/login">Login</Link>
               </p>
             </div>
           </Form>

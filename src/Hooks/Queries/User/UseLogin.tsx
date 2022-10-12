@@ -11,14 +11,11 @@ export const useLogin = () => {
 
   const { isLoading, mutate } = useMutation(login, {
     onError: (error: AxiosError) => {
-      console.log(error.response?.data);
+      console.log(error.response);
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries("login");
-      Cookies.set("token", data.data?.token);
-      if (data.status === 200) {
-        navigate("../dashborad");
-      }
+      console.log(data);
     },
   });
   return { mutate, isLoading };
