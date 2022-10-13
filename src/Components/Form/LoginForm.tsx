@@ -1,5 +1,5 @@
 import { loginSchema } from "Configs/formsSchemas";
-import { Form, Formik } from "formik";
+import { ErrorMessage, Form, Formik } from "formik";
 import { useLogin } from "Hooks/Queries/User/UseLogin";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
@@ -8,7 +8,7 @@ import { loginAttemp } from "Recoil/Atoms";
 interface LoginFormProps {}
 
 const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
-  const { mutate, isLoading } = useLogin();
+  const { mutate, isLoading, isError } = useLogin();
   const [, setLoginAttemp] = useRecoilState(loginAttemp);
 
   return (
@@ -18,8 +18,8 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
         password: "",
       }}
       onSubmit={(data) => {
-        setLoginAttemp(data)
-        mutate(data)
+        setLoginAttemp(data);
+        mutate(data);
       }}
       validationSchema={loginSchema}
     >
@@ -29,6 +29,10 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
             onSubmit={handleSubmit}
             className="col-7 shadow-lg p-3 mb-5 bg-white rounded"
           >
+            <div className="form-group col text-center">
+              <img alt="Logo" src="../assets/img/mdg_gallo_150.png" />
+            </div>
+
             <div className="form-group mb-4">
               <input
                 type="email"
@@ -41,6 +45,11 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
               <label className="form-label" htmlFor="email">
                 Email address
               </label>
+              <ErrorMessage
+                className="text-danger"
+                name="email"
+                component="div"
+              />
             </div>
 
             <div className="form-group mb-4">
@@ -55,17 +64,26 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
               <label className="form-label" htmlFor="password">
                 Password
               </label>
+              <ErrorMessage
+                className="text-danger"
+                name="password"
+                component="div"
+              />
             </div>
-
-            {isLoading ? (
-              <div className="spinner-grow text-success" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-            ) : (
-              <button type="submit" className="btn btn-outline-primary">
-                Sign in
-              </button>
+            {isError && (
+              <span className="text-danger">Please check your credentials</span>
             )}
+            <div className="form-group col text-center">
+              {isLoading ? (
+                <div className="spinner-grow text-success" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              ) : (
+                <button type="submit" className="btn btn-outline-primary">
+                  Sign in
+                </button>
+              )}
+            </div>
 
             <div className="text-center">
               <p>

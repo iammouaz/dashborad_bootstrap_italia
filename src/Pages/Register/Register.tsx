@@ -5,7 +5,15 @@ interface RegisterProps {}
 const Register: React.FunctionComponent<RegisterProps> = () => {
   return (
     <>
-      <div className="container d-flex justify-content-center algin-items-center py-5">
+      <div
+        style={{
+          backgroundImage: "url(../assets/img/14.png)",
+          backgroundPosition: "bottom",
+          backgroundRepeat: "no-repeat",
+          height: "100vh",
+        }}
+        className="d-flex flex-column justify-content-center align-items-center"
+      >
         <RegisterForm />
       </div>
     </>

@@ -3,20 +3,22 @@ import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "react-query";
 import { useLoginAPI } from "API/ApisRequests/Authentication/loginRequest";
 import { AxiosError } from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 export const useLogin = () => {
   const { login } = useLoginAPI();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
 
-  const { isLoading, mutate } = useMutation(login, {
-    onError: (error: AxiosError) => {
-      console.log(error.response);
-    },
+  const { isLoading, mutate, isError } = useMutation(login, {
+    onError: (error: AxiosError) => {},
     onSuccess: (data) => {
       queryClient.invalidateQueries("login");
-      console.log(data);
+      Cookies.set("token", uuidv4());
+      if (data.status === 200) {
+        navigate("../dashborad");
+      }
     },
   });
-  return { mutate, isLoading };
+  return { mutate, isLoading, isError };
 };

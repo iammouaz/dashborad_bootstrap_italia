@@ -11,9 +11,8 @@ export const useRegister = () => {
   const { isLoading, mutate } = useMutation(register, {
     onError: () => {},
     onSuccess: (data) => {
-      console.log(data.data.lognInfo);
       if (data.status === 200) {
-        Cookies.set("token", data.data?.token);
+        Cookies.set("token", data.data.token);
         navigate("../dashborad");
       }
     },

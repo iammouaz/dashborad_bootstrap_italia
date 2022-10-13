@@ -1,0 +1,27 @@
+//
+// Layout Config
+//
+
+// Root font Sizes
+$root-font-size: 16px; // Root font size for desktop mode
+$root-font-size-lg: 15px; // Root font size for tablet mode
+$root-font-size-md: 13px; // Root font size for mobile mode
+
+// Page bg
+$page-bg: $gray-100 !default;
+
+// Content border radius
+$content-border-radius: 1.5rem !default;
+
+// Content Spacing
+$content-spacing: (
+  desktop: 30px,
+  // Padding for desktop mode
+  tablet-and-mobile: 15px // Padding for tablet and mobile modes,,,,
+) !default;
+
+
+// Footer
+$footer-config: (
+  bg-color: $white,
+) !default;

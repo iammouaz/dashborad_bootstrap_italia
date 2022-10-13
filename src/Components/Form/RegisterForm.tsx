@@ -12,7 +12,6 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
   const [loginD, setLogin] = useRecoilState(loginData);
   const { mutate, isLoading } = useRegister();
 
-
   return (
     <Formik
       initialValues={{
@@ -35,6 +34,9 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
             className="col-7 shadow-lg p-3 mb-5 bg-white rounded"
             onSubmit={handleSubmit}
           >
+            <div className="form-group col text-center">
+              <img alt="Logo" src="../assets/img/mdg_gallo_150.png" />
+            </div>
             <div className="row my-4">
               <div className="form-group mb-4 col-md-6">
                 <input
@@ -112,15 +114,18 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
                 />
               </div>
             </div>
-            {isLoading ? (
-              <div className="spinner-grow text-success" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-            ) : (
-              <button type="submit" className="btn btn-outline-primary">
-                Register
-              </button>
-            )}
+
+            <div className="form-group col text-center">
+              {isLoading ? (
+                <div className="spinner-grow text-success" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              ) : (
+                <button type="submit" className="btn btn-outline-primary">
+                  Register
+                </button>
+              )}
+            </div>
 
             <div className="text-center">
               <p>

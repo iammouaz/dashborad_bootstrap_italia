@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { loginAttemp, loginData } from "Recoil/Atoms";
+import { v4 as uuidv4 } from "uuid";
 
 var MockAdapter = require("axios-mock-adapter");
 
@@ -59,7 +60,7 @@ export const useAxiosInstance = () => {
   mock.onGet("/register").reply(function () {
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
-        resolve([200, { success: true }]);
+        resolve([200, { token: uuidv4() }]);
       }, 1000);
     });
   });
