@@ -1,3 +1,4 @@
+import Header from "Components/Layout/Header";
 import Cookies from "js-cookie";
 import { Navigate } from "react-router-dom";
 
@@ -14,6 +15,11 @@ const ProtectedRoute: React.FunctionComponent<ProtectedRouteProps> = ({
     return <Navigate to="/login" replace />;
   }
 
-  return <>{children}</>;
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 };
 export default ProtectedRoute;

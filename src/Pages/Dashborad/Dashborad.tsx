@@ -1,9 +1,11 @@
-interface DashboradProps {
-    
-}
- 
+interface DashboradProps {}
+
 const Dashborad: React.FunctionComponent<DashboradProps> = () => {
-    return ( <>Dashborad</> );
-}
- 
+  return (
+    <>
+
+    </>
+  );
+};
+
 export default Dashborad;

@@ -12,6 +12,7 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
   const [loginD, setLogin] = useRecoilState(loginData);
   const { mutate, isLoading } = useRegister();
 
+  
   return (
     <Formik
       initialValues={{
@@ -37,7 +38,7 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
             <div className="form-group col text-center">
               <img alt="Logo" src="../assets/img/mdg_gallo_150.png" />
             </div>
-            <div className="row my-4">
+            <div className="row m-4">
               <div className="form-group mb-4 col-md-6">
                 <input
                   type="email"
@@ -75,12 +76,13 @@ const RegisterForm: React.FunctionComponent<RegisterFormProps> = () => {
                 />
               </div>
             </div>
-            <div className="row my-4">
+            <div className="row m-4">
               <div className="form-group mb-4 col-md-6">
                 <input
                   type="password"
+                  data-bs-input
+                  className="form-control input-password input-password-strength-meter"
                   id="password"
-                  className="form-control"
                   name="password"
                   onChange={handleChange}
                   value={values.password}

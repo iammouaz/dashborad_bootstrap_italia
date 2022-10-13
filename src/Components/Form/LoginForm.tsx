@@ -33,7 +33,7 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
               <img alt="Logo" src="../assets/img/mdg_gallo_150.png" />
             </div>
 
-            <div className="form-group mb-4">
+            <div className="form-group m-4">
               <input
                 type="email"
                 id="email"
@@ -52,7 +52,7 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
               />
             </div>
 
-            <div className="form-group mb-4">
+            <div className="form-group m-4">
               <input
                 type="password"
                 id="password"
