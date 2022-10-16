@@ -1,7 +1,16 @@
+//Fonts
+$font-family-serif: Inter, Helvetica, "sans-serif";
+$font-family-sans-serif: Inter, Helvetica, "sans-serif";
+$font-family-monospace: Inter, Helvetica, "sans-serif";
 
-$font-family-serif: Poppins, Helvetica, "sans-serif";
-$font-family-sans-serif: Poppins, Helvetica, "sans-serif";
-$font-family-monospace: Poppins, Helvetica, "sans-serif";
+//Theme Colors
+$primary-h: 236;
+$primary-s: 28;
+$primary-b: 23;
+
+$secondary-h: 345;
+$secondary-s: 73;
+$secondary-b: 95;
 
 // import libreria
 @import "node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss";

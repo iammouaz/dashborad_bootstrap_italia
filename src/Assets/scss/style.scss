@@ -3,5 +3,14 @@
 //
 
 // Layout
-@import 'bootstrap-italia-custom.scss';
-@import 'layout/layout';
+@import "bootstrap-italia-custom.scss";
+@import "layout/layout";
+@import "components/components";
+
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

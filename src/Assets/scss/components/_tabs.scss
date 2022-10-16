@@ -1,0 +1,16 @@
+//
+// Tabs
+//
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+  .dashborad-card {
+    max-width: $card-width-lg;
+  }
+}

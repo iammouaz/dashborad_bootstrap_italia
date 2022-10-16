@@ -1,0 +1,19 @@
+//
+// Cards
+//
+
+.dashborad-card {
+
+}
+
+.content-card {
+  border-radius: $border-radius;
+}
+
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+  .dashborad-card {
+    max-width: $card-width-lg;
+  }
+}
