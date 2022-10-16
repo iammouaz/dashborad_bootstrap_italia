@@ -5,9 +5,14 @@
 .tab-item {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
+.avatar-profile {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem
+}
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
   .dashborad-card {
