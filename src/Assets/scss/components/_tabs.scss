@@ -13,6 +13,10 @@
   flex-direction: column;
   gap: .25rem
 }
+
+.table-tabs {
+  overflow: auto;
+}
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
   .dashborad-card {

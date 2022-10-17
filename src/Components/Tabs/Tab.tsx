@@ -67,7 +67,7 @@ const Tab: React.FunctionComponent<TabProps> = () => {
           </a>
         </li>
       </ul>
-      <div className="tab-content" id="myTabContent">
+      <div className="tab-content table-tabs">
         <div
           className="tab-pane p-4 fade show active"
           id="tab1"

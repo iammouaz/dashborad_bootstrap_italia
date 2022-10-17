@@ -36,7 +36,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                 </DataCard>
               </div>
               <div className="col-lg-7 col-12">
-                <DataCard>
+                <DataCard isScrolled>
                   <>
                     <div className="top-icon">
                       <h2 className="card-title bold">
