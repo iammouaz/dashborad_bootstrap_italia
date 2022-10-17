@@ -1,11 +1,14 @@
 import AvatarGroup from "Components/Avatars/AvatarGroup";
+import AvatarwithTitle from "Components/Avatars/AvatarwithTitle";
 import DataCard from "Components/Cards/DataCard";
 import ExternalLinks from "Components/Lists/ExternalLinks";
 import ProgressBar from "Components/Progress/ProgressBar";
 import ProgressDonuts from "Components/Progress/ProgressDonuts";
 import Tab from "Components/Tabs/Tab";
 import { Link } from "react-router-dom";
-
+import { BiDollarCircle } from "react-icons/bi";
+import { FiExternalLink } from "react-icons/fi";
+import AvatarTeam from "Components/Avatars/AvatarTeam";
 interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
@@ -93,6 +96,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
 
                     <p className="card-text">
                       <h5 className="pb-3">Today’s Heroes</h5>
+
                       <AvatarGroup />
                     </p>
                   </>
@@ -111,17 +115,97 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                 </DataCard>
               </div>
             </div>
+
+            <div className="row">
+              <div className="col-12">
+                <DataCard>
+                  <>
+                    <div className="row">
+                      <img
+                        className="project-card col-6"
+                        src="../assets/img/img-33.jpg"
+                      />
+                      <div className="row col-6">
+                        <div className="col-7">
+                          <span className="card-text opacity-75">Featured</span>
+                          <h2>9 Degree</h2>
+                        </div>
+                        <h3 className="col-2">
+                          <code className="badge bg-primary card-badge ">
+                            New
+                          </code>
+                        </h3>
+                        <div className="col-6">
+                          <AvatarwithTitle
+                            image="https://randomuser.me/api/portraits/men/43.jpg"
+                            name="Robert Fox"
+                            title="Manager"
+                          />
+                        </div>
+                        <div className="col-6">
+                          <AvatarwithTitle
+                            Icon={BiDollarCircle}
+                            name="$64.800"
+                            title="Budget"
+                          />
+                        </div>
+                        <div className="col-12 h5 opacity-75">
+                          Flat cartoony illustrations with vivid unblended
+                          colors and asymmetrical beautiful purple hair lady
+                        </div>
+                        <div className="col-10 h5 opacity-75">
+                          <div className="callout">
+                            <div className="callout-title">
+                              <svg className="icon">
+                                <use href="../assets/sprites.svg#it-info-circle"></use>
+                              </svg>
+                              Due Date
+                            </div>
+                            <h6>Feb 6, 2021</h6>
+                          </div>
+                        </div>
+                        <div className="col-7">
+                          <AvatarTeam />
+                        </div>
+                        <div className="col-5">
+                          <Link className="d-flex gap-2 pt-2 h6" to="#">
+                            View Project <FiExternalLink />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                </DataCard>
+              </div>
+            </div>
           </div>
           <div className="col-12 col-xl-7">
-            <DataCard>
-              <>
-                <h5 className="card-title bold">Authors Achievements </h5>
-                <h3 className="card-text opacity-75">Avg. 69.34% Conv. Rate</h3>
-                <p className="card-text">
-                  <Tab />
-                </p>
-              </>
-            </DataCard>
+            <div className="row">
+              <DataCard>
+                <>
+                  <h5 className="card-title bold">Authors Achievements </h5>
+                  <h3 className="card-text opacity-75">
+                    Avg. 69.34% Conv. Rate
+                  </h3>
+
+                  <p className="card-text">
+                    <Tab />
+                  </p>
+                </>
+              </DataCard>
+              <DataCard>
+                <>
+                  <h5 className="card-title bold">Authors Achievements </h5>
+                  <h3 className="card-text opacity-75">
+                    Avg. 69.34% Conv. Rate
+                  </h3>
+
+                  <p className="card-text">
+                    <Tab />
+                  </p>
+                </>
+              </DataCard>
+            </div>
           </div>
         </div>
       </div>

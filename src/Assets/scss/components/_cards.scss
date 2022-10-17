@@ -13,6 +13,16 @@
   padding: $card-padding;
 }
 
+.project-card {
+  height: $project-card-image-height;
+  border-radius: $border-radius;
+}
+
+.card-badge {
+  height: max-content;
+  margin-top : $card-padding
+}
+
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
   .dashborad-card {

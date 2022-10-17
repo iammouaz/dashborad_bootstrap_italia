@@ -23,12 +23,12 @@ export const authors = [
     },
     conv: "92.56%",
   },
-  {
-    details: {
-      name: "Cody Fishers",
-      image: "https://randomuser.me/api/portraits/men/33.jpg",
-      location: "Mexico",
-    },
-    conv: "63.08%",
-  },
+  // {
+  //   details: {
+  //     name: "Cody Fishers",
+  //     image: "https://randomuser.me/api/portraits/men/33.jpg",
+  //     location: "Mexico",
+  //   },
+  //   conv: "63.08%",
+  // },
 ];
