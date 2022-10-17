@@ -3,13 +3,15 @@
 //
 
 .dashborad-card {
-
 }
 
 .content-card {
   border-radius: $border-radius;
 }
 
+.card-big {
+  padding: $card-padding;
+}
 
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
