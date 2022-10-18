@@ -84,12 +84,6 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
                 </button>
               )}
             </div>
-
-            <div className="text-center">
-              <p>
-                Not a member? <Link to="/register">Register</Link>
-              </p>
-            </div>
           </Form>
         );
       }}

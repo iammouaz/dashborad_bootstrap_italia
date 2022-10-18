@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "Components/Providers/ProtectedRoute";
 import UnProtectedRoute from "Components/Providers/UnProtectedRoute";
 import Login from "Pages/Login/Login";
-import Register from "Pages/Register/Register";
 import Dashborad from "Pages/Dashborad/Dashborad";
 
 interface AppRoutesProps {}
@@ -24,14 +23,6 @@ const AppRoutes: React.FunctionComponent<AppRoutesProps> = () => {
           element={
             <UnProtectedRoute>
               <Login />
-            </UnProtectedRoute>
-          }
-        />
-        <Route
-          path="register"
-          element={
-            <UnProtectedRoute>
-              <Register />
             </UnProtectedRoute>
           }
         />
