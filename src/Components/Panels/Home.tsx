@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { BiDollarCircle } from "react-icons/bi";
 import { FiExternalLink } from "react-icons/fi";
 import AvatarTeam from "Components/Avatars/AvatarTeam";
+import DurationTab from "Components/Tabs/DurationTab";
 interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
@@ -195,13 +196,13 @@ const Home: React.FunctionComponent<HomeProps> = () => {
               </DataCard>
               <DataCard>
                 <>
-                  <h5 className="card-title bold">Authors Achievements </h5>
+                  <h5 className="card-title bold">Performance Overview</h5>
                   <h3 className="card-text opacity-75">
-                    Avg. 69.34% Conv. Rate
+                    Users from all channels
                   </h3>
 
                   <p className="card-text">
-                    <Tab />
+                    <DurationTab />
                   </p>
                 </>
               </DataCard>
