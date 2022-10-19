@@ -1,3 +1,4 @@
+import CountCard from "Components/Cards/CountCard";
 import DataCard from "Components/Cards/DataCard";
 import ProgressBar from "Components/Progress/ProgressBar";
 import { BsPatchCheckFill } from "react-icons/bs";
@@ -41,9 +42,18 @@ const Settings: React.FunctionComponent<SettingsProps> = () => {
                             <FiMail /> max@kt.com
                           </Link>
                         </div>
+                        <div className="row gap-3 pt-2">
+                          <div className="col-2">
+                            <CountCard up value={5400} type="Earnings" />
+                          </div>
+                          <div className="col-2">
+                            <CountCard up={false} value={75} type="Projects" />
+                          </div>
+                          <div className="col-2">
+                            <CountCard up value={60} type="Success Rate" />
+                          </div>
+                        </div>
                       </div>
-
-                      <div></div>
                     </div>
                     <div className="col-2">
                       <div className="col-12">
