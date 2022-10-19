@@ -23,6 +23,8 @@
   margin-top : $card-padding
 }
 
+
+
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
   .dashborad-card {
