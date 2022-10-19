@@ -1,11 +1,14 @@
 import ProfileMenu from "Components/Menus/ProfileMenu";
 import { useLogout } from "Hooks/Queries/User/useLogout";
+import { useRecoilState } from "recoil";
+import { currentTab } from "Recoil/Atoms";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 interface HeaderProps {}
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
   const { Logout } = useLogout();
+  const [current, setcurrentTab] = useRecoilState(currentTab);
 
   return (
     <div className="it-header-wrapper">
@@ -15,7 +18,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             <div className="col-12">
               <div className="it-header-slim-wrapper-content">
                 <a className="navbar-brand" href="#">
-                Pannello
+                  Pannello
                 </a>
 
                 <div className="it-header-slim-right-zone">
@@ -58,17 +61,48 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                     <div className="menu-wrapper">
                       <ul className="navbar-nav">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#" aria-disabled="true">
+                          <a
+                            onClick={() => {
+                              setcurrentTab("home");
+                            }}
+                            className={
+                              current === "home"
+                                ? "nav-link active"
+                                : "nav-link "
+                            }
+                            href="#"
+                            aria-disabled="true"
+                          >
                             <span>Home</span>
                           </a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">
+                          <a
+                            onClick={() => {
+                              setcurrentTab("data");
+                            }}
+                            className={
+                              current === "data"
+                                ? "nav-link active"
+                                : "nav-link "
+                            }
+                            href="#"
+                          >
                             <span>Data</span>
                           </a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">
+                          <a
+                            onClick={() => {
+                              setcurrentTab("settings");
+                            }}
+                            className={
+                              current === "settings"
+                                ? "nav-link active"
+                                : "nav-link "
+                            }
+                            href="#"
+                          >
                             <span>Settings</span>
                           </a>
                         </li>

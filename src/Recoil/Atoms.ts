@@ -24,3 +24,8 @@ export const loginAttemp = atom({
     password: "admin",
   },
 });
+
+export const currentTab = atom({
+  key: "currentTab",
+  default: "home",
+});
