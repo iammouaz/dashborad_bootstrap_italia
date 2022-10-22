@@ -61,11 +61,11 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
   letter-spacing: normal;
   @include media-breakpoint-up(sm) {
-    font-size: 1.333rem;
+    font-size: 1.333rem !important;
   }
 }
 

@@ -28,6 +28,23 @@
   border-radius: 1.75rem;
 }
 
+.edit-profile {
+  position: absolute;
+  font-size: 2.5rem;
+  border-radius: 1.5rem;
+  background: white;
+  padding: 0.5rem;
+  right: 0;
+  border: 1px solid;
+}
+
+.avatar-box {
+  width: fit-content;
+}
+
+.checkbox-postion {
+  padding-left: $card-padding;
+}
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
   .dashborad-card {

@@ -1,5 +1,6 @@
 import CountCard from "Components/Cards/CountCard";
 import DataCard from "Components/Cards/DataCard";
+import UpdateSettingsForm from "Components/Form/UpdateSettingsForm";
 import ProgressBar from "Components/Progress/ProgressBar";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
@@ -73,6 +74,11 @@ const Settings: React.FunctionComponent<SettingsProps> = () => {
                       </div>
                     </div>
                   </div>
+                </>
+              </DataCard>
+              <DataCard>
+                <>
+                  <UpdateSettingsForm />
                 </>
               </DataCard>
             </div>
