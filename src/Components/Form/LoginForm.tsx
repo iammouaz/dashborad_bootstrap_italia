@@ -14,8 +14,8 @@ const LoginForm: React.FunctionComponent<LoginFormProps> = () => {
   return (
     <Formik
       initialValues={{
-        email: "",
-        password: "",
+        email: "admin@montedelgallo.com",
+        password: "admin",
       }}
       onSubmit={(data) => {
         setLoginAttemp(data);
