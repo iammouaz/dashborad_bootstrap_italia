@@ -1,3 +1,4 @@
+import Footer from "Components/Layout/Footer";
 import Header from "Components/Layout/Header";
 import Cookies from "js-cookie";
 import { Navigate } from "react-router-dom";
@@ -19,6 +20,7 @@ const ProtectedRoute: React.FunctionComponent<ProtectedRouteProps> = ({
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 };

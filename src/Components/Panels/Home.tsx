@@ -15,7 +15,7 @@ interface HomeProps {}
 const Home: React.FunctionComponent<HomeProps> = () => {
   return (
     <>
-      <div className="row p-5">
+      <div className="row p-3">
         <div className="row">
           <div className="col-xl-5 col-12">
             <div className="row">
@@ -123,10 +123,10 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                   <>
                     <div className="row">
                       <img
-                        className="project-card col-6"
+                        className="project-card col-12 col-lg-6 "
                         src="../assets/img/img-33.jpg"
                       />
-                      <div className="row col-6">
+                      <div className="row col-12 col-lg-6 pt-3">
                         <div className="col-7">
                           <span className="card-text opacity-75">Featured</span>
                           <h2>9 Degree</h2>

@@ -6,7 +6,7 @@ interface ProfileMenuProps {}
 const ProfileMenu: React.FunctionComponent<ProfileMenuProps> = () => {
   const { Logout } = useLogout();
   return (
-    <div className="dropdown">
+    <div className="dropdown d-none d-lg-block">
       <button
         className="btn btn-dropdown dropdown-toggle"
         type="button"

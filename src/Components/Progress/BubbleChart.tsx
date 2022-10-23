@@ -62,7 +62,7 @@ const BubbleChart: React.FunctionComponent<BubbleChartProps> = () => {
           opacity: 0.8,
         },
         title: {
-          text: "Simple Bubble Chart",
+          text: "Performance Overview",
         },
         xaxis: {
           tickAmount: 7,

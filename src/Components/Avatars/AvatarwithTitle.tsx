@@ -15,7 +15,7 @@ const AvatarwithTitle: React.FunctionComponent<AvatarwithTitleProps> = ({
 }) => {
   return (
     <>
-      <div className="row">
+      <div className="row gap-2">
         <div className="col-4">
           {image && (
             <div className="avatar size-lg">
@@ -24,7 +24,7 @@ const AvatarwithTitle: React.FunctionComponent<AvatarwithTitleProps> = ({
           )}
           {Icon && <Icon fontSize="3.2rem" color="green" />}
         </div>
-        <div className="col-8">
+        <div className="col-7">
           <span>
             <span className="card-text opacity-75">{title}</span>
             <h6 className="strong">{name}</h6>

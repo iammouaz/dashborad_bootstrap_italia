@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-import { ErrorMessage, Form, Formik } from "formik";
-import { registerSchema } from "Configs/formsSchemas";
-import { Link } from "react-router-dom";
+import { Form, Formik } from "formik";
 import EditAvatar from "Components/Avatars/EditAvatar";
 
 interface UpdateSettingsFormProps {}
@@ -20,21 +17,21 @@ const UpdateSettingsForm: React.FunctionComponent<
           phone: "044 3276 454 932",
         }}
         onSubmit={(data) => {
-          null;
+          console.log(data);
         }}
       >
         {({ handleChange, handleSubmit, values }) => {
           return (
-            <Form className="row gap-5" onSubmit={handleSubmit}>
+            <Form className="row gap-lg-5 gap-2" onSubmit={handleSubmit}>
               <div className="row justify-content-between align-items-center">
-                <label className="col-2 h5">Avatar </label>
-                <div className="col-10">
+                <label className="col-lg-2 col-3 h5">Avatar </label>
+                <div className="col-lg-10 col-6">
                   <EditAvatar />
                 </div>
               </div>
               <div className="row row justify-content-between align-items-center">
-                <label className="col-2 h5">Full Name </label>
-                <div className="form-group mb-4 col-md-5">
+                <label className="col-lg-2 col-12 h5">Full Name </label>
+                <div className="form-group mb-4 col-6 col-lg-5">
                   <input
                     type="text"
                     className="form-control"
@@ -44,7 +41,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                   />
                 </div>
 
-                <div className="form-group mb-4 col-md-5">
+                <div className="form-group mb-4 col-6 col-lg-5">
                   <input
                     type="text"
                     className="form-control"
@@ -55,7 +52,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                 </div>
               </div>
               <div className="row row justify-content-between align-items-center">
-                <label className="col-2 h5">Company</label>
+                <label className="col-lg-2 col-6  h5">Company</label>
                 <div className="form-group mb-4 col-md-10">
                   <input
                     type="text"
@@ -67,7 +64,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                 </div>
               </div>
               <div className="row row justify-content-between align-items-center">
-                <label className="col-2 h5">Contact Phone</label>
+                <label className="col-lg-2 col-6 h5">Contact Phone</label>
                 <div className="form-group mb-4 col-md-10">
                   <input
                     type="text"
@@ -79,7 +76,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                 </div>
               </div>
               <div className="row row justify-content-between align-items-center">
-                <label className="col-2 h5">Language</label>
+                <label className="col-lg-2 col-6  h5">Language</label>
                 <div className="form-group mb-4 col-md-10">
                   <div className="select-wrapper">
                     <select defaultValue="en">
@@ -90,7 +87,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                 </div>
               </div>
               <div className="row row justify-content-between align-items-center">
-                <label className="col-2 h5">Communication</label>
+                <label className="col-lg-2 col-6 h5">Communication</label>
                 <div className="form-group mb-4 col-md-10">
                   <div>
                     <div className="form-check form-check-inline">
@@ -106,9 +103,12 @@ const UpdateSettingsForm: React.FunctionComponent<
               </div>
 
               <div className="row row justify-content-between align-items-center checkbox-postion">
-                <div className="form-check col-6">
+                <div className="form-check col-lg-3 col-12">
                   <div className="toggles">
-                    <label className="col-2 h5" htmlFor="toggleEsempio1a">
+                    <label
+                      className="col-lg-1 col-6  h5"
+                      htmlFor="toggleEsempio1a"
+                    >
                       Allow Marketing
                       <input type="checkbox" id="toggleEsempio1a" />
                       <span className="lever"></span>
@@ -116,7 +116,7 @@ const UpdateSettingsForm: React.FunctionComponent<
                   </div>
                 </div>
               </div>
-              <div className="col-2">
+              <div className="col-lg-2">
                 {false ? (
                   <div className="spinner-grow text-success" role="status">
                     <span className="visually-hidden">Loading...</span>
