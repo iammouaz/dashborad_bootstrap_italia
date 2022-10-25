@@ -28,11 +28,11 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   line-height: 1.25;
   letter-spacing: normal;
   @include media-breakpoint-up(sm) {
-    font-size: 2.222rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
 }
@@ -50,7 +50,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.1666;
   letter-spacing: normal;
   @include media-breakpoint-up(sm) {
@@ -62,7 +62,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
   letter-spacing: normal;
   @include media-breakpoint-up(sm) {
